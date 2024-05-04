@@ -15,7 +15,7 @@
 <body class="bg-dark">
 <div class="d-flex align-items-center justify-content-center text-center" style="min-height: 100vh">
     <div class="card border-0" style="width: 25rem;">
-        <div class="card-header bg-primary p-1"></div>
+        <div class="card-header bg-danger p-1"></div>
         <img src="/static/images/profile.png" class="card-img-top" alt="Headshot image">
         <div class="card-body">
             <h3 class="card-title">Tyler Hand</h3>
@@ -23,26 +23,22 @@
             <hr>
             <p class="card-text">
                 Email: <a class="link-primary" href="mailto:handt@fca.gov">handt@fca.gov</a><br>
+                <i>(no work email access until June)</i><br>
                 Phone: <a class="link-primary" href="tel:208-874-9423">(208) 874-9423</a><br>
                 Location: <a class="link-primary" href="https://www.google.com/maps/place/8101+E+Prentice+Ave+%231200,+Greenwood+Village,+CO+80111/@39.6210131,-104.8936438,17z/data=!3m1!4b1!4m6!3m5!1s0x876c86f842836cd9:0xcfecb59fe863c40e!8m2!3d39.6210131!4d-104.8936438!16s%2Fg%2F11mbqrsgbb?entry=ttu" target="_blank">Denver Field Office</a><br>
             </p>
             <hr>
             <div class="d-grid">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#linksModal">View Other Links</button>
+                <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#linksModal">View Other Links</button>
+                <button type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#tipsModal">File a Complaint/Submit a Tip</button>
+                <a class="btn btn-secondary m-1" href="/static/vcard/vcard.vcf" target="_blank">Download Contact Card (VCF)</a>
             </div>
-            <div class="d-grid mt-2">
-                <a class="btn btn-secondary" href="/static/vcard/vcard.vcf" target="_blank">Download Contact Card (VCF)</a>
-            </div>
-
         </div>
-        <div class="card-footer">
-            <strong>Note:</strong> I won't have access to my work email until June. For now, use <a href="mailto:mail@tylerhand.me">mail@tylerhand.me</a>.
-        </div>
-        <div class="card-footer bg-primary p-1"></div>
+        <div class="card-footer bg-danger p-1"></div>
     </div>
 </div>
 
-<!-- Modal -->
+<!-- Links Modal -->
 <div class="modal fade" id="linksModal" tabindex="-1" aria-labelledby="linksModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -65,6 +61,86 @@
         </div>
     </div>
 </div>
+
+<!-- Tips Modal -->
+<div class="modal modal-xl fade" id="tipsModal" tabindex="-1" aria-labelledby="tipsModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="tipsModalLabel">Submit a Tip</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h5><strong>Tips with the Farm Credit Administration:</strong></h5>
+                <p><strong>Borrowers: </strong>As a FCS borrower, you have certain rights - all of which are outlined on the page linked below. If you feel these have
+                been violated, or there has otherwise been a violation of US law, you are advised to file a complaint. We can be reached
+                at <a href="mailto:info-line@fca.gov">info-line@fca.gov</a>. Please note that we do not mediate disagreements between borrowers
+                and institutions and only intervene when existing regulations have been violated.</p>
+                <p><strong>FCS Employees: </strong>If you feel that there are major problems at your institution that merit the attention of
+                FCA, including being asked to do something you feel is illegal, please get in touch. You can reach us at <a href="mailto:info-line@fca.gov">info-line@fca.gov</a>.</p>
+                <p><i>*Please note that this is not legal advice. You are advised to consult a licensed attorney before taking any action.</i></p>
+                <a class="btn btn-outline-danger" href="https://www.fca.gov/bank-oversight/borrower-rights" target="_blank">FCS Borrower Rights + File a Complaint</a>
+                <a class="btn btn-outline-danger" href="mailto:info-line@fca.gov">Email info-line@fca.gov</a><br><br>
+                <hr>
+                <h5><strong>Other Agencies:</strong></h5>
+                <p>We only regulate the Farm Credit System (FCS). For things unrelated to the FCS, please see the table below for relevant agencies:</p>
+                <p><i>*Please note that this is not legal advice. You are advised to consult a licensed attorney before taking any action.</i></p>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col">Firm Type</th>
+                        <th scope="col">Who do I contact?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>Banks</th>
+                        <td>For complaints with consumer products, you should file with the <a href="https://www.consumerfinance.gov/about-us/contact-us/" target="_blank">
+                            Consumer Financial Protection Bureau (CFPB)</a>. You can also contact the <a href="https://www.fdic.gov/resources/consumers/consumer-assistance-topics/complaint-information.html" target="_blank">
+                            Federal Deposit Insurance Corporation (FDIC)</a>, <a href="https://helpwithmybank.gov/" target="_blank">Office of the Comptroller of Currency (OCC)</a>, or respective state banking regulator (if regulated at the state level).</td>
+                    </tr>
+                    <tr>
+                        <th>Credit Unions</th>
+                        <td>For issues with a credit union, you should file a tip with the <a href="https://mycreditunion.gov/consumer-assistance-center" target="_blank">National Credit Union Administration (NCUA)</a>.</td>
+                    </tr>
+                    <tr>
+                        <th>Payday Lenders, Other Finance Companies, and Bank/Credit Union Consumer Products</th>
+                        <td>You should file complaints with the <a href="https://www.consumerfinance.gov/about-us/contact-us/" target="_blank">Consumer Financial Protection Bureau (CFPB)</a> or get in touch with your
+                            state's department of finance (or relevant regulator).</td>
+                    </tr>
+                    <tr>
+                        <th>Investment Advisors</th>
+                        <td>Investment advisers with assets exceeding $110 million and/or that advise an entity registered
+                            under the Investment Company Act must register with the Securities and Exchange Commission (SEC).
+                            <a href="https://www.sec.gov/complaint/select" target="_blank">Contact the SEC here.</a>
+                            All other advisers register at the state level with their respective state securities administrator under the
+                            Uniform Securities Act. You can find a listing of state securities administrators <a href="https://www.nasaa.org/contact-your-regulator/" target="_blank">here</a>.</td>
+                    </tr>
+                    <tr>
+                        <th>Brokerage Firms</th>
+                        <td>To file a complaint about a brokerage firm, please contact the <a href="https://www.finra.org/contact-finra" target="_blank">Financial Industry Regulatory Authority (FINRA)</a>. They also have a toll-free helpline for seniors.</td>
+                    </tr>
+                    <tr>
+                        <th>Public Companies</th>
+                        <td>To file a regulatory tip about a public company, please contact the <a href="https://www.sec.gov/complaint/select" target="_blank">Securities and Exchange Commission (SEC)</a>. If applicable,
+                        check out the <a href="https://www.sec.gov/whistleblower" target="_blank">SEC Whistleblower Program</a> which, if a tip leads to enforcement, may include a portion of the settlement.</td>
+                    </tr>
+                    <tr>
+                        <th>Futures Brokerages</th>
+                        <td>Futures brokers and those operating pooled investment funds for commodity futures are required to register with
+                        the Commodity Futures Trading Commission (CFTC) and obtain membership with the National Futures Association (NFA).
+                        <a href="https://www.cftc.gov/complaint" target="_blank">File a CFTC tip or complaint here.</a></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Core theme JS-->
 <script src="/static/js/bootstrap.min.js"></script>
 </body>
